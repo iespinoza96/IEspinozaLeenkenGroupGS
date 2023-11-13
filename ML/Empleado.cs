@@ -8,7 +8,7 @@ namespace ML
 {
     public class Empleado
     {
-        public int IdEmpleado { get; set; }
+        public int? IdEmpleado { get; set; }
 
         public string? NumeroNomina { get; set; }
 
@@ -18,8 +18,8 @@ namespace ML
 
         public string? ApellidoMaterno { get; set; }
 
-        public ML.Estado Estado { get; set; }
+        public ML.Estado? Estado { get; set; }
 
-        public List<object> Empleados { get; set; }
+        public List<object>? Empleados { get; set; }
     }
 }

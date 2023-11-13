@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+@section Scripts {
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="~/js/Empleado/EmpleadoCRUD.js"></script>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="panel-title">Empleado:</h2>
+            <hr />
+        </div>
+    </div>
+
+    <form>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    @*label Id= lblNombre / TextBox Id= txtNombre  / DropDownList Id= ddlCategorias*@
+                    <input type="text" class="form-control" id="txtIdEmpelado" placeholder="Id" />
+                    @*@Html.TextBoxFor(model => model.NumeroInterior, new { @class = "form-control", @id = "txtNumeroInterior" })*@
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    @*label Id= lblNombre / TextBox Id= txtNombre  / DropDownList Id= ddlCategorias*@
+                    <input type="text" class="form-control" id="txtNumeroNomina" placeholder="NumeroNomina" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    @*label Id= lblNombre / TextBox Id= txtNombre  / DropDownList Id= ddlCategorias*@
+                    <input type="text" class="form-control" id="txtNombre" placeholder="Nombre" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txtApellidoPaterno" placeholder="ApellidoPaterno" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txtApellidoMaterno" placeholder="ApellidoMaterno" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <select id="ddlEstado" class="form-control">
+                        <option>Seleccione una opcion</option>
+                        <option value="1">CDMX</option>
+                        <option value="2">JALISCO</option>
+                        <option value="3">OXACA</option>
+                        <option value="4">MONTERREY</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-1">
+            <button id="boton" type="submit" class="btn btn-success" title="Agregar" onclick="Add()">
+                Agregar
+            </button>
+        </div>
+        <div class="col-md-1">
+            <button id="boton" class="btn btn-danger" title="Cancelar">
+                Cancelar
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h4 class="modal-title">Detalle</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            <h5>
+                                Acción completada con éxito
+                            </h5>
+                        </div>
+                        <div class="modal-footer">
+                            @Html.ActionLink("Regresar", "GetAll", "SubCategoria", htmlAttributes: new { @class = "btn btn-primary  btn-lg" })
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+

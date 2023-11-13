@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts {
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="~/js/Empleado/EmpleadoCRUD.js"></script>
+}
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col">
+            <h1>Empleados</h1>
+            
+            <hr />
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-10">
+        </div>
+        <div class="col-md-1" style="padding-left:100px">
+            @Html.ActionLink("Agregar", "Form", "Empleado", htmlAttributes: new { @class = "btn btn-success" })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <table id="tblEmpleado" class="table table-hover" border="1">
+                <thead>
+                    <tr>
+                        <th class="text-center" scope="col">Editar</th>
+                        <th class="text-center" scope="col">IdEmpleado</th>
+                        <th class="text-center" scope="col">NumeroNomina</th>
+                        <th class="text-center" scope="col">Nombre</th>
+                        <th class="text-center" scope="col">ApellidoPaterno</th>
+                        <th class="text-center" scope="col">ApellidoMaterno</th>
+                        <th class="text-center" scope="col">IdEstado</th>
+                        <th class="text-center" scope="col">Estado</th>
+                        <th class="text-center" scope="col">Eliminar</th>
+                    </tr>
+
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+
